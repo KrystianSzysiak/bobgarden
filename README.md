@@ -1,137 +1,67 @@
-# BobGarden — strona firmowa z panelem edycji
+# BobGarden
 
-Nowoczesna strona wizytówka firmy ogrodniczej: usługi, galeria realizacji z efektami 3D, formularz wyceny, wersja PL i EN.
-Treści i zdjęcia edytujesz w panelu, który działa **tylko na Twoim komputerze**.
+Strona wizytówka firmy ogrodniczej — usługi, galeria realizacji, formularz wyceny.
+Zbudowana bez frameworków: czysty HTML, CSS i JavaScript, z animacjami sterowanymi przewijaniem i modelem 3D w banerze.
 
----
+**🌿 Demo na żywo: https://krystianszysiak.github.io/bobgarden/**
 
-## Struktura plików
-
-```
-bobgarden/
-├── package.json            ← informacje o projekcie i komenda „npm start”
-├── start.bat               ← dwuklik = uruchom serwer i otwórz panel (Windows)
-├── server.js               ← lokalny serwer: pokazuje stronę i obsługuje zapis z panelu
-├── admin/                  ← panel edycji (NIE trafia do internetu)
-│   ├── index.html
-│   ├── admin.css
-│   └── admin.js
-├── public/                 ← GOTOWA STRONA — tylko ten folder jest publikowany
-│   ├── index.html          ← układ strony
-│   ├── style.css           ← wygląd (kolory na górze pliku)
-│   ├── script.js           ← język PL/EN, galeria, formularz, uruchamianie scen
-│   ├── scenes.js           ← animowane sceny 2D: przekrój ziemi, trawnik z rolki, pory roku
-│   ├── garden3d.js         ← kwiatowy ogród 3D w banerze (Three.js)
-│   ├── vendor/three-lite.js← biblioteka Three.js (okrojona, nie edytuj)
-│   ├── icons.js            ← ikony usług
-│   ├── data/content.json   ← WSZYSTKIE TREŚCI (to edytuje panel)
-│   └── img/                ← zdjęcia (hero.jpg + gallery/)
-├── .github/workflows/pages.yml  ← automatyczna publikacja na GitHub Pages
-└── backups/                ← kopie zapasowe tworzone przy każdym zapisie (lokalnie)
-```
-
-**Jak to działa razem:**
-- **Strona (frontend)** to zwykłe pliki HTML/CSS/JS. Po otwarciu `script.js` wczytuje `data/content.json` i na jego podstawie buduje treść w wybranym języku.
-- **Serwer (backend)** jest potrzebny tylko do edycji. `server.js` (Express) wyświetla stronę pod `localhost:3000`, panel pod `localhost:3000/admin` i zapisuje zmiany do `public/data/content.json` oraz zdjęcia do `public/img/gallery/`.
-- **W internecie** działa sam folder `public/` na GitHub Pages, bez serwera, za darmo.
+*A landing page for a gardening company, built with vanilla HTML/CSS/JS. Bilingual (PL/EN), scroll-driven SVG animations, a Three.js garden island, and a local admin panel for editing all content.*
 
 ---
 
-## 1. Pierwsze uruchomienie (jednorazowo)
+## Co jest w środku
 
-1. Zainstaluj **Node.js** (wersja LTS) ze strony https://nodejs.org
-2. Otwórz folder projektu w terminalu
-   (Windows: wejdź do folderu w Eksploratorze, kliknij pasek adresu, wpisz `cmd` i naciśnij Enter).
-3. Wpisz:
-   ```
-   npm install
-   ```
+| | |
+|---|---|
+| **Dwa języki** | Cała treść w PL i EN, przełącznik w nagłówku. Język zapamiętywany w `localStorage`, wykrywany z `?lang=` i ustawień przeglądarki. Brak tłumaczenia = fallback na polski. |
+| **Ogród 3D** | Niskopoligonowa wyspa z kwiatami w banerze — Three.js, cienie, proceduralnie generowane rośliny, delikatna reakcja na ruch myszy. |
+| **Trzy sceny animowane przewijaniem** | Ręcznie rysowane sceny SVG, w których postęp przewijania steruje każdym elementem: przekrój gleby z nawodnieniem i kiełkującymi kwiatami, układanie trawnika z rolki (walec → rolki → zraszacze → kosiarka → zmierzch) oraz drzewo przechodzące przez cztery pory roku. |
+| **Galeria** | Siatka realizacji z lightboxem, lazy loading, obsługa klawiatury. |
+| **Formularz wyceny** | Wysyłka e-mail przez [Web3Forms](https://web3forms.com) (bez backendu), z polem preferowanego terminu oględzin i opcjonalnym linkiem do rezerwacji (Cal.com / Calendly). Bez klucza API formularz otwiera program pocztowy z gotową wiadomością. |
+| **Panel edycji** | Lokalna aplikacja Express: teksty (PL/EN), dane kontaktowe, usługi, cennik i galeria ze zmianą kolejności i wgrywaniem zdjęć. Zapisuje do `public/data/content.json`, robi kopie zapasowe, skaluje zdjęcia przed zapisem. |
 
-## 2. Edycja treści
+Strona jest responsywna, działa bez JavaScriptowych zależności i bez śledzenia. Strony wynikowej nie trzeba budować — to gotowe pliki statyczne.
 
-**Najprościej (Windows):** kliknij dwukrotnie plik **`start.bat`**. Przy pierwszym uruchomieniu zainstaluje, co trzeba, uruchomi serwer i otworzy panel w przeglądarce. Nie zamykaj czarnego okna, dopóki pracujesz w panelu.
+## Technologie
 
-Albo ręcznie w terminalu:
+- **Frontend:** HTML, CSS (custom properties, `clamp()`, grid), JavaScript ES5/ES6 — zero zależności runtime
+- **3D:** [Three.js](https://threejs.org) 0.186, spakowany do lekkiego bundla przez esbuild
+- **Animacje:** SVG generowane w JS, `IntersectionObserver` + `requestAnimationFrame`, sekcje sticky
+- **Panel:** Node.js + [Express](https://expressjs.com) 4 (jedyna zależność), zapis atomowy do JSON
+- **Hosting:** GitHub Pages + GitHub Actions (publikowany jest tylko folder `public/`)
+
+## Struktura
+
 ```
+public/              ← gotowa strona (to trafia na GitHub Pages)
+  index.html
+  style.css          ← zmienne kolorów w :root na górze pliku
+  script.js          ← język, galeria, formularz, silnik scen
+  scenes.js          ← definicje trzech scen 2D
+  garden3d.js        ← ogród 3D (Three.js)
+  data/content.json  ← wszystkie treści strony
+  img/               ← zdjęcia galerii
+admin/               ← panel edycji (nie jest publikowany)
+server.js            ← lokalny serwer Express dla panelu
+.github/workflows/   ← publikacja na GitHub Pages
+```
+
+## Uruchomienie lokalne
+
+```bash
+npm install
 npm start
 ```
 
-> ⚠️ Panel **nie działa** z innymi serwerami (np. `python -m http.server`, Live Server w VS Code) — one tylko wyświetlają pliki, nie umieją zapisywać zmian. Do panelu zawsze używaj `start.bat` lub `npm start`.
 - Strona: http://localhost:3000
-- Panel: http://localhost:3000/admin
+- Panel edycji: http://localhost:3000/admin
 
-W panelu zmieniasz teksty (PL i EN), dane kontaktowe, usługi i galerię. Kliknij **Zapisz zmiany** (albo naciśnij Ctrl+S) i odśwież podgląd.
-Serwer zatrzymasz, naciskając `Ctrl + C` w terminalu.
+Na Windowsie wystarczy dwuklik na `start.bat`.
 
-> Zostaw puste pole EN, a strona pokaże w tym miejscu tekst polski.
-> Każdy zapis tworzy kopię poprzedniej wersji w folderze `backups/`. Usunięte z galerii zdjęcia też tam trafiają.
+Panel wymaga tego serwera — `python -m http.server` czy Live Server tylko wyświetlają pliki i nie zapiszą zmian. Samo `public/` można natomiast serwować dowolnie, byle nie otwierać `index.html` bezpośrednio z dysku (przeglądarka zablokuje wczytanie `content.json`).
 
-## 3. Publikacja na GitHub Pages (jednorazowa konfiguracja)
+Pełna instrukcja dla właściciela strony — edycja treści, publikacja, podpięcie formularza i własnej domeny — jest w [INSTRUKCJA.md](INSTRUKCJA.md).
 
-1. Załóż konto na https://github.com i utwórz nowe repozytorium, np. `bobgarden` (publiczne).
-2. Wyślij pliki do repozytorium. Najprościej przez **GitHub Desktop** (https://desktop.github.com):
-   *File → Add local repository* → wybierz folder projektu → *Publish repository*.
-   Albo w terminalu:
-   ```
-   git init
-   git add .
-   git commit -m "Pierwsza wersja strony"
-   git branch -M main
-   git remote add origin https://github.com/TWOJA-NAZWA/bobgarden.git
-   git push -u origin main
-   ```
-3. Na GitHubie wejdź w repozytorium → **Settings → Pages** → w polu **Source** wybierz **GitHub Actions**.
-4. Po 1–2 minutach strona będzie dostępna pod adresem `https://TWOJA-NAZWA.github.io/bobgarden/`
-   (postęp widać w zakładce **Actions**).
+## Licencja
 
-### Aktualizacja strony po zmianach w panelu
-- **GitHub Desktop:** wpisz krótki opis zmian → *Commit to main* → *Push origin*.
-- **Terminal:** `git add .` → `git commit -m "Nowe zdjęcia"` → `git push`
-- **Ręcznie przez przeglądarkę:** w repozytorium otwórz `public/data/content.json` → *Add file → Upload files* i wgraj nowy plik (a nowe zdjęcia do `public/img/gallery/`).
-
-Strona zaktualizuje się po około minucie.
-
----
-
-## 4. Formularz wyceny (e-mail)
-
-1. Wejdź na https://web3forms.com, wpisz **bobgarden@wp.pl** i odbierz darmowy klucz (Access Key) z maila.
-2. Wklej klucz w panelu: **Kontakt i ustawienia → Klucz Web3Forms** i zapisz.
-3. Opublikuj zmiany. Od teraz zapytania z formularza przychodzą na maila.
-
-Bez klucza formularz też działa, ale otwiera u klienta program pocztowy z gotową wiadomością.
-
-## 5. Rezerwacje online (opcjonalnie)
-
-Załóż darmowe konto na https://cal.com (lub Calendly), utwórz typ spotkania, np. „Oględziny działki”, i podłącz swój kalendarz.
-Wklej link w panelu w polu **Link do rezerwacji online**. W sekcji kontakt pojawi się przycisk „Umów oględziny online”.
-Wyczyść pole, a przycisk zniknie.
-
-## 6. Własna domena (opcjonalnie, ok. 50–100 zł rocznie)
-
-Kup domenę, np. `bobgarden.pl`, a potem na GitHubie w **Settings → Pages → Custom domain** wpisz ją i ustaw rekordy DNS według instrukcji GitHuba.
-
----
-
-## Częste pytania
-
-**Strona otwarta prosto z pliku (dwuklik na index.html) jest pusta.**
-Przeglądarka blokuje wczytywanie `content.json` z dysku. Uruchom `npm start` i wejdź na http://localhost:3000.
-
-**Chcę zmienić kolory.**
-Otwórz `public/style.css`. Kolory są na samej górze w sekcji `:root`.
-
-**Chcę przesunąć ogród 3D w banerze.**
-Otwórz `public/garden3d.js`. Na górze jest obiekt `PLACE`: pozycja (`nx`, `ny` od -1 do 1), wielkość (`s`) i ustawienia na telefon (`m`). Ogród jest częścią banera i przewija się razem ze stroną.
-
-**Animowane sceny (gleba, trawnik, pory roku).**
-Teksty etapów zmienisz w panelu (zakładki „Animacja: …”). Same rysunki i ruch są w `public/scenes.js` — każda scena ma tam `steps` (od którego momentu przewijania zaczyna się dany etap) oraz `build` i `update`. Kolejność scen na stronie zmienisz, przestawiając sekcje `<section class="scene">` w `public/index.html`.
-
-**Nie widzę ogrodu 3D.**
-Ogród 3D wymaga WebGL, który działa w każdej nowoczesnej przeglądarce. Jeśli w przeglądarce wyłączono „akcelerację sprzętową”, strona działa normalnie, tylko bez modelu.
-
-**Opcja „ogranicz ruch” w systemie.**
-Zatrzymuje tylko animacje, które zapętlają się same (pasek z usługami, tło). Ogród 3D i efekty sterowane przewijaniem działają dalej.
-
-**Port 3000 jest zajęty.**
-Uruchom na innym porcie: Windows (cmd) `set PORT=3001&& npm start`, macOS/Linux `PORT=3001 npm start`.
+Kod można wykorzystywać dowolnie. Zdjęcia w `public/img/` należą do firmy BobGarden i nie są objęte tą zgodą.
