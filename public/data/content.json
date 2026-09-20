@@ -1,0 +1,497 @@
+{
+  "settings": {
+    "companyName": "BobGarden",
+    "phone": "+48 123 456 789",
+    "email": "bobgarden@wp.pl",
+    "instagramUrl": "",
+    "instagramLabel": "@bobgarden",
+    "facebookUrl": "",
+    "facebookLabel": "bobgarden",
+    "area": {
+      "pl": "Okolice Warszawy, do 40 km",
+      "en": "Warsaw area, up to 40 km"
+    },
+    "web3formsKey": "",
+    "bookingUrl": ""
+  },
+  "hero": {
+    "image": "img/hero.jpg",
+    "eyebrow": {
+      "pl": "Usługi ogrodnicze — kompleksowo, przez cały sezon",
+      "en": "Garden services — end to end, all year round"
+    },
+    "titleLine1": {
+      "pl": "Ogród, który wygląda tak dobrze",
+      "en": "A garden that looks just as good"
+    },
+    "titleLine2": {
+      "pl": "w grudniu jak w czerwcu.",
+      "en": "in December as in June."
+    },
+    "text": {
+      "pl": "Zakładanie trawników, nasadzenia, nawadnianie, oświetlenie i stała pielęgnacja — jedna ekipa, jeden numer telefonu, żadnych niedokończonych rabat.",
+      "en": "Lawns, planting, irrigation, lighting and ongoing care — one crew, one phone number, no half-finished flower beds."
+    }
+  },
+  "services": {
+    "intro": {
+      "pl": "Od założenia trawnika po zimowe zabezpieczenie ogrodu — jedna ekipa, która zna Twoją działkę od pierwszego sezonu.",
+      "en": "From laying a new lawn to preparing your garden for winter — one crew that knows your plot from the very first season."
+    },
+    "categories": [
+      {
+        "icon": "grass",
+        "title": {
+          "pl": "Trawniki",
+          "en": "Lawns"
+        },
+        "items": {
+          "pl": [
+            "Zakładanie trawników z rolki i siewu",
+            "Koszenie trawników",
+            "Zabiegi pielęgnacyjne trawników",
+            "Nawożenie trawników"
+          ],
+          "en": [
+            "Turf and seeded lawn installation",
+            "Lawn mowing",
+            "Lawn care treatments",
+            "Lawn fertilising"
+          ]
+        }
+      },
+      {
+        "icon": "flower",
+        "title": {
+          "pl": "Rabaty i nasadzenia",
+          "en": "Beds & planting"
+        },
+        "items": {
+          "pl": [
+            "Aranżacja i wykonanie rabat",
+            "Nasadzenia",
+            "Podcinanie żywopłotów",
+            "Podcinanie drzew i krzewów",
+            "Oprysk środkami ochrony roślin"
+          ],
+          "en": [
+            "Flower bed design and build",
+            "Planting",
+            "Hedge trimming",
+            "Tree and shrub pruning",
+            "Plant protection spraying"
+          ]
+        }
+      },
+      {
+        "icon": "droplet",
+        "title": {
+          "pl": "Nawadnianie i oświetlenie",
+          "en": "Irrigation & lighting"
+        },
+        "items": {
+          "pl": [
+            "Instalacja automatycznego nawadniania",
+            "Oświetlenie ogrodowe"
+          ],
+          "en": [
+            "Automatic irrigation systems",
+            "Garden lighting"
+          ]
+        }
+      },
+      {
+        "icon": "clean",
+        "title": {
+          "pl": "Mycie i czyszczenie",
+          "en": "Cleaning & washing"
+        },
+        "items": {
+          "pl": [
+            "Mycie kostek brukowych",
+            "Mycie elewacji",
+            "Mycie dachów"
+          ],
+          "en": [
+            "Paving stone cleaning",
+            "Facade washing",
+            "Roof washing"
+          ]
+        }
+      },
+      {
+        "icon": "seasonal",
+        "title": {
+          "pl": "Opieka całoroczna",
+          "en": "Year-round care"
+        },
+        "items": {
+          "pl": [
+            "Stała opieka nad ogrodem",
+            "Przygotowanie ogrodu do sezonu",
+            "Zabezpieczenie ogrodu przed zimą",
+            "Karczowanie działek"
+          ],
+          "en": [
+            "Ongoing garden maintenance",
+            "Spring garden preparation",
+            "Winter garden protection",
+            "Land clearing"
+          ]
+        }
+      }
+    ]
+  },
+  "growth": {
+    "title": {
+      "pl": "Od gołej ziemi do kwitnącego ogrodu",
+      "en": "From bare soil to a garden in bloom"
+    },
+    "steps": [
+      {
+        "title": {
+          "pl": "Przygotowanie gruntu",
+          "en": "Ground preparation"
+        },
+        "text": {
+          "pl": "Usuwamy stary trawnik i chwasty, poprawiamy glebę i drenaż.",
+          "en": "We remove old turf and weeds, improve the soil and drainage."
+        }
+      },
+      {
+        "title": {
+          "pl": "System nawadniania",
+          "en": "Irrigation system"
+        },
+        "text": {
+          "pl": "Pod ziemią układamy rury i linie kroplujące, a zraszacze wysuwają się tylko na czas podlewania.",
+          "en": "Pipes and drip lines go underground; pop-up sprinklers rise only while watering."
+        }
+      },
+      {
+        "title": {
+          "pl": "Siew i nasadzenia",
+          "en": "Sowing and planting"
+        },
+        "text": {
+          "pl": "Rozkładamy żyzną ziemię, wysiewamy trawę i sadzimy rośliny dobrane do Twojej działki.",
+          "en": "We spread rich topsoil, sow grass and plant species chosen for your plot."
+        }
+      },
+      {
+        "title": {
+          "pl": "Ogród rośnie",
+          "en": "Your garden grows"
+        },
+        "text": {
+          "pl": "Korzenie piją wodę z systemu, trawa gęstnieje, a rabaty kwitną — sezon po sezonie.",
+          "en": "Roots drink from the system, the lawn thickens and the beds bloom — season after season."
+        }
+      }
+    ]
+  },
+  "lawnScene": {
+    "title": {
+      "pl": "Trawnik z rolki w jeden dzień",
+      "en": "A turf lawn in a single day"
+    },
+    "steps": [
+      {
+        "title": {
+          "pl": "Wyrównanie i wałowanie",
+          "en": "Levelling and rolling"
+        },
+        "text": {
+          "pl": "Wyrównujemy teren, usuwamy kamienie i zagęszczamy podłoże walcem — bez tego trawnik byłby pofałdowany.",
+          "en": "We level the ground, clear stones and firm the base with a roller — otherwise the lawn would be bumpy."
+        }
+      },
+      {
+        "title": {
+          "pl": "Układanie trawy z rolki",
+          "en": "Laying the turf"
+        },
+        "text": {
+          "pl": "Rozwijamy pasy gotowej darni na styk. Po kilku godzinach ogród jest zielony.",
+          "en": "We unroll strips of ready-grown turf edge to edge. A few hours later the garden is green."
+        }
+      },
+      {
+        "title": {
+          "pl": "Podlewanie i pierwsze koszenie",
+          "en": "Watering and first mow"
+        },
+        "text": {
+          "pl": "Obfite podlewanie pomaga korzeniom się przyjąć, a pierwsze koszenie zostawia piękne pasy.",
+          "en": "Generous watering helps the roots take hold, and the first mow leaves those classic stripes."
+        }
+      },
+      {
+        "title": {
+          "pl": "Oświetlenie ogrodu",
+          "en": "Garden lighting"
+        },
+        "text": {
+          "pl": "Po zmroku ogród pracuje dalej: lampy przy ścieżkach i podświetlone drzewa robią efekt.",
+          "en": "After dark the garden keeps working: path lights and up-lit trees set the mood."
+        }
+      }
+    ]
+  },
+  "gallery": {
+    "intro": {
+      "pl": "Wybrane prace — trawniki, rabaty, żywopłoty i oświetlenie u naszych klientów. Kliknij zdjęcie, aby je powiększyć.",
+      "en": "Selected work — lawns, flower beds, hedges and lighting for our clients. Click a photo to enlarge it."
+    },
+    "items": [
+      {
+        "src": "img/gallery/trawnik-nowoczesny-dom.jpg",
+        "caption": {
+          "pl": "Trawnik z rolki przy nowoczesnym domu",
+          "en": "Turf lawn by a modern house"
+        }
+      },
+      {
+        "src": "img/gallery/trawy-ozdobne-oswietlenie.jpg",
+        "caption": {
+          "pl": "Trawy ozdobne i oświetlenie wśród otoczaków",
+          "en": "Ornamental grasses and lighting among pebbles"
+        }
+      },
+      {
+        "src": "img/gallery/sciezka-z-plyt.jpg",
+        "caption": {
+          "pl": "Ścieżka z płyt w trawniku i rabata z otoczaków",
+          "en": "Stepping-stone path and pebble bed"
+        }
+      },
+      {
+        "src": "img/gallery/hortensje-i-tuje.jpg",
+        "caption": {
+          "pl": "Rabata z hortensjami bukietowymi i tujami",
+          "en": "Bed with panicle hydrangeas and thujas"
+        }
+      },
+      {
+        "src": "img/gallery/nasadzenia-przy-altanie.jpg",
+        "caption": {
+          "pl": "Nasadzenia bylin i traw przy altanie",
+          "en": "Perennials and grasses by a gazebo"
+        }
+      },
+      {
+        "src": "img/gallery/oswietlenie-noca.jpg",
+        "caption": {
+          "pl": "Oświetlenie ogrodowe nocą",
+          "en": "Garden lighting at night"
+        }
+      },
+      {
+        "src": "img/gallery/rabata-z-otoczakow.jpg",
+        "caption": {
+          "pl": "Rabata z otoczaków wzdłuż żywopłotu",
+          "en": "Pebble bed along a hedge"
+        }
+      },
+      {
+        "src": "img/gallery/murek-kamienny-trawnik.jpg",
+        "caption": {
+          "pl": "Trawnik i rabata przy murku z kamienia",
+          "en": "Lawn and bed by a dry-stone wall"
+        }
+      },
+      {
+        "src": "img/gallery/trawnik-przy-chodniku.jpg",
+        "caption": {
+          "pl": "Równy trawnik przy obrzeżu z płyt",
+          "en": "Crisp lawn edge along paving"
+        }
+      },
+      {
+        "src": "img/gallery/trawnik-w-pasy.jpg",
+        "caption": {
+          "pl": "Trawnik koszony w pasy i rabata kamienna",
+          "en": "Striped lawn and stone bed"
+        }
+      },
+      {
+        "src": "img/gallery/zywoplot-z-tui.jpg",
+        "caption": {
+          "pl": "Obsadzenie żywopłotu i rabata żwirowa",
+          "en": "Hedge planting and gravel bed"
+        }
+      },
+      {
+        "src": "img/gallery/nowa-rabata-rozstawienie.jpg",
+        "caption": {
+          "pl": "Nowa rabata — rozstawienie roślin przed sadzeniem",
+          "en": "New bed — laying out plants before planting"
+        }
+      },
+      {
+        "src": "img/gallery/trawnik-wzdluz-domu.jpg",
+        "caption": {
+          "pl": "Trawnik i szpaler drzew wzdłuż ogrodzenia",
+          "en": "Lawn and a row of trees along the fence"
+        }
+      }
+    ]
+  },
+  "about": {
+    "title": {
+      "pl": "Zakładanie ogrodów to nasza pasja.",
+      "en": "Creating gardens is our passion."
+    },
+    "paragraph1": {
+      "pl": "Jesteśmy grupą pasjonatów i profesjonalistów, którzy od wielu lat zajmują się projektowaniem, tworzeniem i pielęgnacją ogrodów. Specjalizujemy się w ogrodach przydomowych oraz terenach zielonych wokół budynków komercyjnych — od projektu i aranżacji zieleni, przez doradztwo w pielęgnacji roślin, po dostawę roślin i materiałów.",
+      "en": "We are a team of enthusiasts and professionals who have been designing, building and caring for gardens for many years. We specialise in home gardens and green areas around commercial buildings — from design and planting, through plant-care advice, to supplying plants and materials."
+    },
+    "paragraph2": {
+      "pl": "Pracujemy sezon po sezonie z tymi samymi posesjami — dzięki temu wiemy, kiedy dana rabata potrzebuje przycięcia, a kiedy trawnik wymaga tylko nawożenia, a nie kolejnego siewu.",
+      "en": "We work with the same properties season after season, so we know when a bed needs pruning and when a lawn just needs feeding rather than reseeding."
+    },
+    "quote": {
+      "pl": "Przyjeżdżają, wiedzą co robić, nie trzeba niczego tłumaczyć od nowa co miesiąc. Ogród pierwszy raz wygląda tak samo dobrze zimą jak latem.",
+      "en": "They show up, they know what to do, and I don't have to explain everything again every month. For the first time the garden looks as good in winter as in summer."
+    },
+    "quoteAuthor": {
+      "pl": "klient, stała opieka nad ogrodem",
+      "en": "client, ongoing garden care"
+    },
+    "stats": [
+      {
+        "number": "18",
+        "label": {
+          "pl": "usług w jednej ekipie",
+          "en": "services from one crew"
+        }
+      },
+      {
+        "number": "12",
+        "label": {
+          "pl": "miesięcy opieki w roku",
+          "en": "months of care a year"
+        }
+      },
+      {
+        "number": "1",
+        "label": {
+          "pl": "osoba kontaktowa",
+          "en": "point of contact"
+        }
+      }
+    ]
+  },
+  "seasons": {
+    "title": {
+      "pl": "Ogród zadbany przez cały rok",
+      "en": "A well-kept garden all year round"
+    },
+    "steps": [
+      {
+        "title": {
+          "pl": "Wiosna",
+          "en": "Spring"
+        },
+        "text": {
+          "pl": "Przygotowanie ogrodu do sezonu: nawożenie, wertykulacja, pierwsze nasadzenia i przycinanie.",
+          "en": "Getting the garden ready: feeding, scarifying, first plantings and pruning."
+        }
+      },
+      {
+        "title": {
+          "pl": "Lato",
+          "en": "Summer"
+        },
+        "text": {
+          "pl": "Regularne koszenie, podlewanie i pielęgnacja rabat, żeby wszystko kwitło bez przerwy.",
+          "en": "Regular mowing, watering and bed care so everything keeps blooming."
+        }
+      },
+      {
+        "title": {
+          "pl": "Jesień",
+          "en": "Autumn"
+        },
+        "text": {
+          "pl": "Grabienie liści, przycinanie krzewów i ostatnie nawożenie przed zimą.",
+          "en": "Raking leaves, trimming shrubs and a final feed before winter."
+        }
+      },
+      {
+        "title": {
+          "pl": "Zima",
+          "en": "Winter"
+        },
+        "text": {
+          "pl": "Zabezpieczamy wrażliwe rośliny jutą i ściółką — wiosną budzą się zdrowe.",
+          "en": "We protect delicate plants with burlap and mulch so they wake up healthy in spring."
+        }
+      }
+    ]
+  },
+  "process": {
+    "title": {
+      "pl": "Od pierwszego kontaktu do gotowego ogrodu",
+      "en": "From first contact to a finished garden"
+    },
+    "steps": [
+      {
+        "title": {
+          "pl": "Oględziny działki",
+          "en": "Site visit"
+        },
+        "text": {
+          "pl": "Przyjeżdżamy, oglądamy teren i rozmawiamy o tym, co ma powstać lub co wymaga poprawy.",
+          "en": "We visit, look at the plot and talk about what you want to create or improve."
+        }
+      },
+      {
+        "title": {
+          "pl": "Wycena i zakres prac",
+          "en": "Quote and scope"
+        },
+        "text": {
+          "pl": "Dostajesz jasną wycenę z podziałem na etapy — bez ukrytych pozycji na fakturze.",
+          "en": "You get a clear quote broken down into stages — no hidden items on the invoice."
+        }
+      },
+      {
+        "title": {
+          "pl": "Realizacja",
+          "en": "Delivery"
+        },
+        "text": {
+          "pl": "Wykonujemy prace w uzgodnionym terminie, informując na bieżąco o postępach.",
+          "en": "We carry out the work on the agreed date and keep you updated along the way."
+        }
+      },
+      {
+        "title": {
+          "pl": "Opieka sezonowa",
+          "en": "Seasonal care"
+        },
+        "text": {
+          "pl": "Jeśli chcesz, zostajemy przy Twoim ogrodzie na stałe — koszenie, pielęgnacja, przygotowanie do sezonów.",
+          "en": "If you like, we stay with your garden for good — mowing, maintenance and seasonal preparation."
+        }
+      }
+    ]
+  },
+  "pricing": {
+    "text": {
+      "pl": "Każda działka jest inna — powierzchnia, stan trawnika, dojazd i zakres prac zmieniają wycenę na tyle, że nie podajemy sztywnego cennika. Po oględzinach dostajesz konkretną kwotę na piśmie, bez niespodzianek na końcu.",
+      "en": "Every plot is different — size, lawn condition, access and scope of work change the price enough that we don't publish a fixed price list. After a site visit you get a specific amount in writing, with no surprises at the end."
+    }
+  },
+  "contact": {
+    "title": {
+      "pl": "Porozmawiajmy o Twoim ogrodzie.",
+      "en": "Let's talk about your garden."
+    },
+    "text": {
+      "pl": "Napisz, zadzwoń albo wyślij zapytanie z formularza — odpowiadamy zwykle w ciągu jednego dnia roboczego i umawiamy oględziny działki.",
+      "en": "Write, call or send an enquiry using the form — we usually reply within one working day and arrange a site visit."
+    }
+  }
+}
