@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel — BobGarden</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2314291b'/%3E%3Cpath d='M16 25v-8M16 17c-5 0-7-4-7-8 4 0 7 2 7 6 0-4 3-6 7-6 0 4-2 8-7 8z' stroke='%23e2c08d' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+<aside class="sidebar">
+  <div class="brand">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9"/><path d="M16 25v-8M16 17c-5 0-7-4-7-8 4 0 7 2 7 6 0-4 3-6 7-6 0 4-2 8-7 8z"/></svg>
+    <div><strong>BobGarden</strong><span>Panel edycji</span></div>
+  </div>
+  <nav id="sideNav">
+    <a href="#s-settings">Kontakt i ustawienia</a>
+    <a href="#s-hero">Baner główny</a>
+    <a href="#s-services">Usługi</a>
+    <a href="#s-growth">Animacja: gleba</a>
+    <a href="#s-lawn">Animacja: trawnik</a>
+    <a href="#s-gallery">Galeria</a>
+    <a href="#s-about">O nas</a>
+    <a href="#s-seasons">Animacja: pory roku</a>
+    <a href="#s-process">Jak pracujemy</a>
+    <a href="#s-texts">Cennik i kontakt</a>
+  </nav>
+  <div class="side-help">
+    <p><b>Jak to działa?</b></p>
+    <p>Zmiany zapisują się w pliku <code>public/data/content.json</code>, a nowe zdjęcia w <code>public/img/gallery/</code>.</p>
+    <p>Po zapisaniu wyślij projekt na GitHuba albo podmień te pliki. Strona zaktualizuje się po około minucie.</p>
+  </div>
+</aside>
+
+<div class="main">
+  <header class="topbar">
+    <div class="status" id="status"><span class="dot"></span><span id="statusText">Wczytywanie…</span></div>
+    <div class="top-actions">
+      <a class="btn btn-light" href="/" target="_blank" rel="noopener">Podgląd strony ↗</a>
+      <button class="btn btn-primary" id="saveBtn" type="button" disabled>Zapisz zmiany</button>
+    </div>
+  </header>
+
+  <div class="content" id="editor">
+    <p class="loading" id="loading">Wczytywanie danych…</p>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="/icons.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>
