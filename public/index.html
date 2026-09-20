@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BobGarden — usługi ogrodnicze</title>
+  <meta name="description" content="BobGarden — zakładanie trawników, nasadzenia, nawadnianie, oświetlenie ogrodowe i całoroczna pielęgnacja ogrodów w okolicach Warszawy.">
+  <meta name="theme-color" content="#14291b">
+  <meta property="og:title" content="BobGarden — usługi ogrodnicze">
+  <meta property="og:description" content="Trawniki, rabaty, nawadnianie, oświetlenie i całoroczna opieka nad ogrodem.">
+  <meta property="og:image" content="img/gallery/trawnik-nowoczesny-dom.jpg">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2314291b'/%3E%3Cpath d='M16 25v-8M16 17c-5 0-7-4-7-8 4 0 7 2 7 6 0-4 3-6 7-6 0 4-2 8-7 8z' stroke='%23e2c08d' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main" data-i18n="skip">Przejdź do treści</a>
+
+<!-- ============ NAGŁÓWEK ============ -->
+<header class="site-header" id="siteHeader">
+  <div class="wrap nav">
+    <a href="#top" class="brand" aria-label="BobGarden — strona główna">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+        <rect width="32" height="32" rx="9" />
+        <path d="M16 25v-8M16 17c-5 0-7-4-7-8 4 0 7 2 7 6 0-4 3-6 7-6 0 4-2 8-7 8z" />
+      </svg>
+      <span class="brand-name" data-setting="companyName">BobGarden</span>
+    </a>
+
+    <nav class="nav-links" aria-label="Menu główne">
+      <a href="#uslugi" data-i18n="nav.services">Usługi</a>
+      <a href="#realizacje" data-i18n="nav.work">Realizacje</a>
+      <a href="#o-nas" data-i18n="nav.about">O nas</a>
+      <a href="#cennik" data-i18n="nav.pricing">Cennik</a>
+      <a href="#kontakt" data-i18n="nav.contact">Kontakt</a>
+    </nav>
+
+    <div class="nav-right">
+      <div class="lang-switch" role="group" aria-label="Język / Language">
+        <button type="button" data-lang="pl" aria-pressed="true">PL</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <a href="#kontakt" class="btn btn-small btn-accent nav-cta" data-i18n="nav.cta">Wycena</a>
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="mobile-menu" id="mobileMenu" hidden>
+    <a href="#uslugi" data-i18n="nav.services">Usługi</a>
+    <a href="#realizacje" data-i18n="nav.work">Realizacje</a>
+    <a href="#o-nas" data-i18n="nav.about">O nas</a>
+    <a href="#proces" data-i18n="nav.process">Jak pracujemy</a>
+    <a href="#cennik" data-i18n="nav.pricing">Cennik</a>
+    <a href="#kontakt" class="btn btn-accent" data-i18n="hero.ctaQuote">Poproś o wycenę</a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="top">
+    <!-- Animowane tło: miękkie plamy światła + ziarno -->
+    <div class="hero-bg" aria-hidden="true">
+      <i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i>
+      <div class="grain"></div>
+    </div>
+
+    <div class="wrap hero-grid">
+      <div class="hero-inner" id="heroInner">
+        <p class="eyebrow eyebrow-light hero-eyebrow"><span class="pulse" aria-hidden="true"></span><span data-c="hero.eyebrow"></span></p>
+        <h1 class="hero-title" id="heroTitle">
+          <span class="line" data-split data-c="hero.titleLine1"></span>
+          <span class="line line-accent" data-split data-c="hero.titleLine2"></span>
+        </h1>
+        <p class="hero-text" data-c="hero.text"></p>
+        <div class="actions hero-actions">
+          <a class="btn btn-accent" href="#kontakt" data-i18n="hero.ctaQuote">Poproś o wycenę</a>
+          <a class="btn btn-ghost-light" href="#realizacje" data-i18n="hero.ctaWork">Zobacz realizacje</a>
+        </div>
+      </div>
+
+      <!-- Miejsce dla ogrodu 3D (rysowanego w garden3d.js) -->
+      <div class="garden-spot" aria-hidden="true"></div>
+    </div>
+
+    <a href="#uslugi" class="scroll-cue" aria-hidden="true" tabindex="-1">
+      <span data-i18n="hero.scroll">Przewiń</span>
+      <i></i>
+    </a>
+  </section>
+
+  <!-- Przewijający się pasek z nazwami usług -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track" id="marqueeTrack"></div>
+  </div>
+
+  <!-- ============ CZTERY PORY ROKU (animacja w scenes.js) ============ -->
+  <section class="scene" id="pory-roku" data-scene="seasons" data-content="seasons">
+    <div class="scene-sticky">
+      <svg class="scene-svg" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMax slice" aria-hidden="true"></svg>
+      <div class="scene-panel">
+        <p class="eyebrow" data-i18n="scene.seasons"></p>
+        <h2 class="scene-title"></h2>
+        <ol class="scene-steps"></ol>
+      </div>
+      <div class="scene-progress" aria-hidden="true"><i></i></div>
+    </div>
+  </section>
+
+  <!-- ============ USŁUGI ============ -->
+  <section class="section services" id="uslugi">
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow" data-i18n="services.eyebrow">Co robimy</p>
+        <h2 data-split data-c-ui="services.title">Usługi</h2>
+        <p class="lead" data-c="services.intro"></p>
+      </div>
+      <div class="service-grid" id="serviceGrid"></div>
+    </div>
+  </section>
+
+  <!-- ============ GALERIA ============ -->
+  <section class="section gallery" id="realizacje">
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow" data-i18n="gallery.eyebrow">Portfolio</p>
+        <h2 data-split data-c-ui="gallery.title">Realizacje</h2>
+        <p class="lead" data-c="gallery.intro"></p>
+      </div>
+      <div class="gallery-grid" id="galleryGrid"></div>
+    </div>
+  </section>
+
+  <!-- ============ PRZEKRÓJ ZIEMI: od gleby do kwiatów (animacja w scenes.js) ============ -->
+  <section class="scene" id="jak-rosnie" data-scene="growth" data-content="growth">
+    <div class="scene-sticky">
+      <svg class="scene-svg" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMax slice" aria-hidden="true"></svg>
+      <div class="scene-panel">
+        <p class="eyebrow" data-i18n="scene.growth"></p>
+        <h2 class="scene-title"></h2>
+        <ol class="scene-steps"></ol>
+      </div>
+      <div class="scene-progress" aria-hidden="true"><i></i></div>
+    </div>
+  </section>
+
+  <!-- ============ O NAS ============ -->
+  <section class="section about" id="o-nas">
+    <div class="wrap about-grid">
+      <div class="about-text">
+        <p class="eyebrow" data-reveal data-i18n="about.eyebrow">O nas</p>
+        <h2 data-reveal data-split data-c="about.title"></h2>
+        <p data-reveal data-c="about.paragraph1"></p>
+        <p data-reveal data-c="about.paragraph2"></p>
+        <div class="stats" id="stats"></div>
+      </div>
+      <div class="about-visual" id="aboutVisual">
+        <div class="stack-card stack-back"><img id="aboutImg2" src="" alt="" loading="lazy"></div>
+        <div class="stack-card stack-front"><img id="aboutImg1" src="" alt="" loading="lazy"></div>
+        <blockquote class="quote-card" data-reveal>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 7H5v6h4l-2 4h3l2-4V7zM19 7h-4v6h4l-2 4h3l2-4V7z"/></svg>
+          <p data-c="about.quote"></p>
+          <footer>— <span data-c="about.quoteAuthor"></span></footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TRAWNIK Z ROLKI: od wałowania do wieczornych świateł (animacja w scenes.js) ============ -->
+  <section class="scene" id="trawnik" data-scene="lawn" data-content="lawnScene">
+    <div class="scene-sticky">
+      <svg class="scene-svg" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMax slice" aria-hidden="true"></svg>
+      <div class="scene-panel">
+        <p class="eyebrow" data-i18n="scene.lawn"></p>
+        <h2 class="scene-title"></h2>
+        <ol class="scene-steps"></ol>
+      </div>
+      <div class="scene-progress" aria-hidden="true"><i></i></div>
+    </div>
+  </section>
+
+  <!-- ============ PROCES ============ -->
+  <section class="section process" id="proces">
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow" data-i18n="process.eyebrow">Jak pracujemy</p>
+        <h2 data-split data-c="process.title"></h2>
+      </div>
+      <div class="process-wrap" id="processWrap">
+        <div class="process-line" aria-hidden="true"><i id="processLine"></i></div>
+        <ol class="process-list" id="processList"></ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CENNIK ============ -->
+  <section class="section pricing" id="cennik">
+    <div class="wrap">
+      <div class="pricing-card" data-reveal>
+        <div>
+          <p class="eyebrow eyebrow-light" data-i18n="pricing.eyebrow">Ile to kosztuje</p>
+          <h2 data-i18n="pricing.title">Cennik</h2>
+          <p data-c="pricing.text"></p>
+        </div>
+        <a class="btn btn-accent" href="#kontakt" data-i18n="pricing.cta">Poproś o bezpłatną wycenę</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ KONTAKT ============ -->
+  <section class="section contact" id="kontakt">
+    <div class="wrap contact-grid">
+      <div class="contact-info">
+        <p class="eyebrow" data-reveal data-i18n="contact.eyebrow">Kontakt</p>
+        <h2 data-reveal data-split data-c="contact.title"></h2>
+        <p data-reveal data-c="contact.text"></p>
+        <ul class="contact-list" id="contactList" data-reveal></ul>
+        <div class="booking-box" id="bookingBox" hidden data-reveal>
+          <p data-i18n="booking.text">Wolisz sam wybrać termin? Zarezerwuj oględziny online.</p>
+          <a class="btn btn-dark" id="bookingBtn" href="#" target="_blank" rel="noopener" data-i18n="booking.cta">Umów oględziny online</a>
+        </div>
+      </div>
+
+      <form class="quote-form" id="quoteForm" novalidate data-reveal>
+        <h3 data-i18n="form.title">Poproś o bezpłatną wycenę</h3>
+        <p class="form-sub" data-i18n="form.sub">Odpiszemy z terminem oględzin i orientacyjnym kosztem.</p>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="fName" data-i18n="form.name">Imię i nazwisko</label>
+            <input id="fName" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="fPhone" data-i18n="form.phone">Telefon</label>
+            <input id="fPhone" name="phone" type="tel" autocomplete="tel" required>
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="fEmail"><span data-i18n="form.email">E-mail</span> <small data-i18n="form.optional">(opcjonalnie)</small></label>
+            <input id="fEmail" name="email" type="email" autocomplete="email">
+          </div>
+          <div class="field">
+            <label for="fCity" data-i18n="form.city">Miejscowość</label>
+            <input id="fCity" name="city" type="text" autocomplete="address-level2">
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="fService" data-i18n="form.service">Czego dotyczy zapytanie</label>
+          <select id="fService" name="service"></select>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="fDate" data-i18n="form.date">Preferowany termin oględzin</label>
+            <input id="fDate" name="date" type="date">
+          </div>
+          <div class="field">
+            <label for="fTime" data-i18n="form.time">Pora dnia</label>
+            <select id="fTime" name="time">
+              <option value="any" data-i18n="form.timeAny">Dowolna</option>
+              <option value="morning" data-i18n="form.timeMorning">Rano (8–11)</option>
+              <option value="midday" data-i18n="form.timeMidday">Południe (11–14)</option>
+              <option value="afternoon" data-i18n="form.timeAfternoon">Popołudnie (14–18)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="fMsg" data-i18n="form.message">Wiadomość</label>
+          <textarea id="fMsg" name="message" rows="4" data-i18n-placeholder="form.messagePh"></textarea>
+        </div>
+
+        <!-- Pułapka na boty: ukryte pole, człowiek go nie wypełni -->
+        <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+        <label class="consent">
+          <input type="checkbox" id="fConsent" required>
+          <span data-i18n="form.consent">Wyrażam zgodę na kontakt w sprawie mojego zapytania.</span>
+        </label>
+
+        <button class="btn btn-accent btn-block" type="submit" id="formSubmit" data-i18n="form.submit">Wyślij zapytanie</button>
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <span>© <span id="year"></span> <span data-setting="companyName">BobGarden</span></span>
+    <span data-setting-area></span>
+    <a href="#top" data-i18n="footer.top">Do góry ↑</a>
+  </div>
+</footer>
+
+<!-- ============ LIGHTBOX ============ -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Galeria" hidden>
+  <button class="lb-btn lb-close" id="lbClose" type="button" aria-label="Zamknij">✕</button>
+  <button class="lb-btn lb-prev" id="lbPrev" type="button" aria-label="Poprzednie">‹</button>
+  <figure class="lb-figure">
+    <img id="lbImg" src="" alt="">
+    <figcaption id="lbCap"></figcaption>
+  </figure>
+  <button class="lb-btn lb-next" id="lbNext" type="button" aria-label="Następne">›</button>
+  <span class="lb-count" id="lbCount"></span>
+</div>
+
+<noscript><p class="noscript">Ta strona wymaga włączonego JavaScriptu. / This site requires JavaScript.</p></noscript>
+
+<!-- Ogród 3D pojawiający się w wybranych sekcjach -->
+<canvas id="scene-canvas" aria-hidden="true"></canvas>
+
+<script src="icons.js"></script>
+<script src="scenes.js"></script>
+<script src="script.js"></script>
+<script type="module" src="garden3d.js"></script>
+</body>
+</html>
