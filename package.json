@@ -1,0 +1,16 @@
+{
+  "name": "bobgarden",
+  "version": "1.0.0",
+  "description": "Strona firmowa BobGarden z lokalnym panelem do edycji treści i galerii",
+  "main": "server.js",
+  "private": true,
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
